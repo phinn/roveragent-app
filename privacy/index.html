@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rover — Privacy Policy</title>
+<meta name="description" content="Privacy policy for Rover, the local-first AI agent for iPhone.">
+<style>
+  :root { color-scheme: light dark; }
+  body { margin: 0; background: #12100d; color: #e8e2d6; font: 16px/1.7 Georgia, 'Times New Roman', serif; }
+  main { max-width: 680px; margin: 0 auto; padding: 48px 22px 80px; }
+  h1 { font-size: 28px; letter-spacing: .3px; margin: 0 0 4px; }
+  .accent { color: #d9a441; }
+  .updated { color: #9a927f; font-size: 14px; margin-bottom: 36px; font-family: -apple-system, sans-serif; }
+  h2 { font-size: 19px; margin: 34px 0 10px; color: #f0e9db; }
+  p, li { color: #cfc7b6; }
+  strong { color: #e8e2d6; }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0; font-family: -apple-system, sans-serif; font-size: 14px; }
+  th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid #2a261f; }
+  th { color: #d9a441; font-weight: 600; }
+  td:first-child { color: #e8e2d6; }
+  a { color: #d9a441; }
+  .card { background: #1a1712; border: 1px solid #2a261f; border-radius: 12px; padding: 18px 20px; margin: 18px 0; }
+  footer { margin-top: 56px; padding-top: 18px; border-top: 1px solid #2a261f; color: #9a927f; font-size: 13px; font-family: -apple-system, sans-serif; }
+  @media (prefers-color-scheme: light) {
+    body { background: #faf7f0; color: #2b2620; }
+    h2, strong { color: #241f19; }
+    p, li { color: #4a4436; }
+    th { color: #a67718; } td:first-child { color: #241f19; }
+    th, td { border-bottom-color: #e4dcc9; }
+    .card { background: #f1ebdd; border-color: #e4dcc9; }
+    footer { border-top-color: #e4dcc9; color: #8a8270; }
+    .updated { color: #8a8270; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Rover <span class="accent">—</span> Privacy Policy</h1>
+  <p class="updated">Last updated: September 30, 2026</p>
+
+  <p>Rover is a local-first AI agent for iPhone. This policy explains exactly what data leaves your device and where it goes.</p>
+
+  <h2>The short version</h2>
+  <ul>
+    <li>Your conversations, memories, and settings are stored <strong>only on your iPhone</strong>.</li>
+    <li>When you send a message, the text of that conversation is sent <strong>directly to the AI provider you configure</strong> (e.g. DeepSeek, Zhipu GLM, Moonshot, Anthropic, or your own Ollama server). That is how any AI assistant works — the model must read your request to answer it.</li>
+    <li>The provider you choose receives your text under <strong>their</strong> privacy policy. We do not proxy, log, or copy that traffic. There is no Rover server.</li>
+    <li>Without an API key, Rover runs in demo mode using a built-in local engine. Depending on your prompt it may still perform real web searches or fetch public web pages you ask for.</li>
+  </ul>
+
+  <h2>What is stored, and where</h2>
+  <table>
+    <tr><th>Data</th><th>Location</th><th>Leaves the device?</th></tr>
+    <tr><td>API key</td><td>iOS UserDefaults, on-device</td><td>Only attached to requests to the provider you configured</td></tr>
+    <tr><td>Conversation text</td><td>In-app, on-device; sent to your configured LLM provider per request</td><td>Yes — to your chosen provider only</td></tr>
+    <tr><td>Long-term memory (profile &amp; facts)</td><td>Local SQLite database</td><td>Only relevant snippets, as part of prompts, to your chosen provider</td></tr>
+    <tr><td>Reminders you create</td><td>iOS Reminders (EventKit)</td><td>Governed by Apple</td></tr>
+  </table>
+
+  <div class="card">
+    <p style="margin:0">Rover has <strong>no analytics SDKs, no advertising, no crash reporting, no tracking, and no accounts</strong>. We (the developer) receive nothing.</p>
+  </div>
+
+  <h2>Data disclosure summary (App Store label)</h2>
+  <p>Rover discloses: <strong>Other User Content — not linked to identity — not used for tracking — App Functionality</strong>. This reflects that conversation text is transmitted to your configured AI provider and retained by them beyond the duration of a single request. Nothing else is collected.</p>
+
+  <h2>Permissions</h2>
+  <p>Rover asks for permissions only when you use the matching feature:</p>
+  <ul>
+    <li><strong>Reminders</strong>: when you ask the agent to create a reminder.</li>
+    <li><strong>Clipboard</strong>: read only when you ask it to.</li>
+  </ul>
+
+  <h2>Your control</h2>
+  <ul>
+    <li>Delete any memory fact from the Memory page with a swipe.</li>
+    <li>Edit or clear your profile anytime.</li>
+    <li>Delete the app — everything goes with it. There is nothing on our side to delete, because there is nothing on our side.</li>
+  </ul>
+
+  <h2>Contact</h2>
+  <p>Questions: <a href="mailto:support@roveragent.app">support@roveragent.app</a></p>
+
+  <footer>Rover · Local-first AI agent for iPhone</footer>
+</main>
+</body>
+</html>
